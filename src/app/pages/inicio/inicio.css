@@ -1,0 +1,141 @@
+.boas-vindas {
+  background: #244f36;
+  color: white;
+  text-align: center;
+  padding: 55px 25px;
+  border-radius: 14px;
+  margin-bottom: 40px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.boas-vindas h1 {
+  font-size: 34px;
+  margin-bottom: 15px;
+}
+
+.boas-vindas p {
+  color: #d6e2db;
+  line-height: 1.6;
+  max-width: 750px;
+  margin: 0 auto 25px;
+}
+
+.boas-vindas button {
+  background: #c5e376;
+  color: #244f36;
+  border: none;
+  border-radius: 8px;
+  padding: 13px 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cadastro {
+  background: white;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 40px 0;
+  padding: 35px;
+  border: 1px solid #e6e7e2;
+  border-radius: 14px;
+}
+
+.cadastro h2,
+.itens h2 {
+  color: #244f36;
+  font-size: 26px;
+}
+
+.cadastro p,
+.mensagem {
+  color: #6b6e6a;
+  line-height: 1.6;
+}
+
+.cadastro form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cadastro label {
+  font-weight: bold;
+  color: #244f36;
+  margin-top: 10px;
+}
+
+.cadastro input,
+.cadastro select,
+.cadastro textarea {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 13px;
+  border: 1px solid #d7dccb;
+  border-radius: 7px;
+  background: #fafaf6;
+  font-size: 15px;
+}
+
+.cadastro textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.cadastro button {
+  background: #244f36;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 14px;
+  margin-top: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cadastro button:hover {
+  background: #1b3d29;
+}
+
+.itens {
+  margin: 45px 0;
+}
+
+.lista-itens {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 25px;
+}
+
+@media (max-width: 900px) {
+  .lista-itens {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .boas-vindas {
+    padding: 35px 18px;
+  }
+
+  .boas-vindas h1 {
+    font-size: 27px;
+  }
+
+  .cadastro {
+    padding: 22px 18px;
+  }
+
+  .cadastro h2,
+  .itens h2 {
+    font-size: 23px;
+  }
+
+  .lista-itens {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}

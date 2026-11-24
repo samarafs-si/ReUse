@@ -1,0 +1,72 @@
+<section class="boas-vindas">
+  <h1>Bem-vindo ao ReUse!</h1>
+
+  <p>
+    Dê uma nova vida aos objetos que você não utiliza mais. Compartilhe, troque e ajude a construir
+    um futuro sustentável.
+  </p>
+
+  <button>Quero compartilhar um item</button>
+</section>
+
+<section class="cadastro" id="cadastro">
+  <h2>Compartilhe um objeto</h2>
+  <p>Preencha as informações para disponibilizar seu objeto.</p>
+
+  <form (ngSubmit)="cadastrarItem()">
+    <label>Nome do objeto</label>
+    <input
+      type="text"
+      name="nome"
+      [(ngModel)]="nome"
+      placeholder="Ex.: Livro de programação"
+      required
+    />
+
+    <label>Categoria</label>
+    <select name="categoria" [(ngModel)]="categoria" required>
+      <option value="">Selecione uma categoria</option>
+      <option value="Livros">Livros</option>
+      <option value="Eletrônicos">Eletrônicos</option>
+      <option value="Roupas">Roupas</option>
+      <option value="Materiais escolares">Materiais escolares</option>
+      <option value="Outros">Outros</option>
+    </select>
+
+    <label>Descrição</label>
+    <textarea
+      name="descricao"
+      [(ngModel)]="descricao"
+      [(ngModel)]="descricao"
+      placeholder="Descreva o estado e as características do objeto"
+      required
+    ></textarea>
+
+    <label>O que deseja fazer?</label>
+    <select name="modalidade" [(ngModel)]="modalidade">
+      <option value="Doação">Doar</option>
+      <option value="Troca">Trocar</option>
+    </select>
+
+    <button type="submit">Cadastrar objeto</button>
+  </form>
+</section>
+
+<section class="itens">
+  <h2>Itens disponíveis</h2>
+
+  @if (itemService.itens.length === 0) {
+    <p class="mensagem">Ainda não existem objetos cadastrados. Seja o primeiro a compartilhar!</p>
+  }
+
+  <div class="lista-itens">
+    @for (item of itemService.itens; track item.id) {
+      <app-item-card
+        [item]="item"
+        (statusAlterado)="alterarStatus($event)"
+        (removido)="excluirItem($event)"
+      >
+      </app-item-card>
+    }
+  </div>
+</section>

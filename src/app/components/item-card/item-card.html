@@ -1,0 +1,31 @@
+<div class="card-item">
+  <div class="informacoes">
+    <h3>{{ item().nome }}</h3>
+
+    <span class="categoria">
+      {{ item().categoria }}
+    </span>
+
+    <p>{{ item().descricao }}</p>
+
+    <p>
+      <strong>Modalidade:</strong>
+      {{ item().modalidade }}
+    </p>
+
+    <p>
+      <strong>Status:</strong>
+      {{ item().status }}
+    </p>
+  </div>
+
+  @if (item().status === 'Disponível') {
+    <div class="acoes">
+      <button type="button" (click)="marcarComoDoado()">Marcar como doado</button>
+
+      <button type="button" (click)="marcarComoTrocado()">Marcar como trocado</button>
+    </div>
+  }
+
+  <button type="button" class="excluir" (click)="excluir()">Excluir objeto</button>
+</div>

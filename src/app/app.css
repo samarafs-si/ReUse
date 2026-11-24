@@ -1,0 +1,192 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    'Inter',
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  background-color: #fafaf6;
+}
+
+.navbar {
+  background-color: #fafaf6;
+  padding: 0 5%;
+}
+
+.navbar-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e6e7e2;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 72px;
+  height: 100%;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: #244f36;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.brand svg {
+  width: 22px;
+  height: 22px;
+  stroke: #244f36;
+  transform: translateY(-2px);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 44px;
+  height: 100%;
+  list-style: none;
+}
+
+.nav-item {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #7c7e7b;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #244f36;
+}
+
+.nav-link.active {
+  color: #244f36;
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 44px;
+  height: 3px;
+  background-color: #244f36;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #244f36;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 22px;
+  border-radius: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #1b3d29;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+main {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 35px clamp(16px, 5vw, 75px);
+}
+
+/* TABLETS */
+@media (max-width: 768px) {
+  main {
+    padding: 25px 20px;
+  }
+
+  .navbar-container {
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  .navbar-left {
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 20px 14px;
+  }
+
+  .navbar {
+    padding: 12px;
+  }
+
+  .navbar-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+  .navbar-left {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .btn-primary {
+    align-self: center;
+  }
+}

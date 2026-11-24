@@ -1,0 +1,78 @@
+.card-item {
+  background: #ffffff;
+  border: 1px solid #e6e7e2;
+  border-radius: 14px;
+  padding: 22px;
+  margin: 18px 0;
+  box-shadow: 0 3px 12px #244f360f;
+}
+
+.card-item h3 {
+  color: #244f36;
+  font-size: 21px;
+  margin: 0 0 12px;
+}
+
+.categoria {
+  display: inline-block;
+  background: #ebeee2;
+  color: #244f36;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.card-item p {
+  color: #6b6e6a;
+  line-height: 1.5;
+}
+
+.disponivel {
+  color: #244f36;
+  font-weight: bold;
+}
+
+.acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.acoes button,
+.excluir {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.doar {
+  background: #244f36;
+  color: #ffffff;
+}
+
+.trocar {
+  background: #c5e376;
+  color: #244f36;
+}
+
+.excluir {
+  background: #f6f7f2;
+  color: #8a3c35;
+  margin-top: 12px;
+}
+
+.doar:hover {
+  background: #1b3d29;
+}
+
+.trocar:hover {
+  background: #b7d863;
+}
+
+.excluir:hover {
+  background: #f0e5e2;
+}
